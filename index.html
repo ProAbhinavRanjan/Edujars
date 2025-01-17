@@ -55,11 +55,7 @@
             transition: background-color 0.3s ease; /* Smooth transition on hover */
         }
 
-        /* Add space between the selects */
-        .nav-options select:first-child {
-            margin-right: 20px; /* Adds space between the two select elements */
-        }
-
+       
         .nav-options select:hover {
             background-color: #45a049; /* Darker green on hover */
         }
@@ -176,7 +172,7 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
-
+           
             .nav-options {
                 margin-top: 10px;
                 flex-direction: column;
@@ -228,14 +224,18 @@
             .menu-toggle {
                 display: none;
             }
+            .sel
+        {
+            margin-left:10px;
         }
-
+        }
+    
         .nav-slide ul li {
-            margin-left: 15px;
+            margin-left: 5px;
             margin-top: 4px;
             margin-bottom: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            border-radius: 5px;
             background-color: #424242;
         }
 
@@ -251,10 +251,58 @@
         .nav-slide ul li a:hover {
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
             background-color: #45a049;
+            border-radius:10px;
+            transition: box-shadow 0.3s ease;
         }
 
         #nav-side1 {
             background-color: #45a049;
+        }
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: #7ea3a1;
+            color: black;
+            width: 250px;
+            height: 150px;
+            border-radius: 15px;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .service-card h3 {
+            margin: 10px 0 0 10;
+        }
+
+        .service-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .service-icons img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-icons img:hover {
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -268,7 +316,7 @@
                 <option value="colleges.html">For Colleges</option>
                 <option value="professional.html">Professional Courses</option>
             </select>
-            <select name="language" id="language" onchange="navigateToPage(this)">
+            <select name="language" id="language" onchange="navigateToPage(this)" class="sel">
                 <option value="">Select Course</option>
                 <option value="english.html">HTML & CSS</option>
                 <option value="spanish.html">JavaScript</option>
@@ -299,7 +347,99 @@
             <a href="video">Watch Video</a>
         </div>
     </div>
+<section class="our services"><section class="for school">
+    <div class="services-container">
+        <!-- Card 1 -->
+        <div class="service-card">
+            <h3>Lab Setup</h3>
+            <div class="service-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Lab" title="Lab Setup">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="HTML" title="HTML">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Python" title="Python">
+            </div>
+            <div class="service-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="C++" title="C++">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="HTML" title="HTML">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Python" title="Python">
+            </div>
+        </div>
 
+        <!-- Card 2 -->
+        <div class="service-card">
+            <h3>Coding</h3>
+            <div class="service-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="C++" title="C++">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="HTML" title="HTML">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Python" title="Python">
+            </div>
+            <div class="service-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="C++" title="C++">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="HTML" title="HTML">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Python" title="Python">
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card">
+            <h3>Robotics</h3>
+            <div class="service-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Robot" title="Robot">
+                <img src="https://cdn-icons-png.flaticon.com/512/2329/2329077.png" alt="Sensor" title="Sensor">
+                <img src="https://cdn-icons-png.flaticon.com/512/2909/2909761.png" alt="AI" title="AI">
+            </div>
+            <div class="service-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="C++" title="C++">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="HTML" title="HTML">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Python" title="Python">
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card">
+            <h3>NEP Enablement</h3>
+            <div class="service-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/2784/2784460.png" alt="NEP" title="NEP">
+                <img src="https://cdn-icons-png.flaticon.com/512/2581/2581881.png" alt="Sports" title="Sports">
+                <img src="https://cdn-icons-png.flaticon.com/512/869/869870.png" alt="Cricket" title="Cricket">
+            </div>
+            <div class="service-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="C++" title="C++">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="HTML" title="HTML">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Python" title="Python">
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card">
+            <h3>Workshops & Seminars</h3>
+            <div class="service-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/4270/4270941.png" alt="Workshop" title="Workshop">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208757.png" alt="Lightbulb" title="Idea">
+                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991156.png" alt="Seminar" title="Seminar">
+            </div>
+            <div class="service-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="C++" title="C++">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="HTML" title="HTML">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Python" title="Python">
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card">
+            <h3>Events</h3>
+            <div class="service-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/888/888850.png" alt="Event" title="Event">
+                <img src="https://cdn-icons-png.flaticon.com/512/3997/3997476.png" alt="Plan" title="Plan">
+                <img src="https://cdn-icons-png.flaticon.com/512/888/888858.png" alt="Brainstorm" title="Brainstorm">
+            </div>
+            <div class="service-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="C++" title="C++">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="HTML" title="HTML">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Python" title="Python">
+            </div>
+        </div>
+    </div>
+    </section></section>
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Edujars. All rights reserved.</p>
