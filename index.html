@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edujars - Innovating Education</title>
+    <link rel="icon" href="tit-logo.png" type="image/icon type">
+    <script>
+        function navigateToPage(selectElement) {
+            if (selectElement.value) {
+                window.location.href = selectElement.value;
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            max-height: 80px;
+            max-width: 190px;
+            order: 1;
+        }
+
+        .nav-options {
+            display: flex;
+            align-items: center;
+            order: 2;
+        }
+
+        .nav-options select {
+            appearance: none; /* Remove default dropdown icon */
+            -webkit-appearance: none; /* For Safari */
+            -moz-appearance: none; /* For Firefox */
+            background-image: none; /* Ensure no background image is set */
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50; /* Green background like a button */
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        /* Add space between the selects */
+        .nav-options select:first-child {
+            margin-right: 20px; /* Adds space between the two select elements */
+        }
+
+        .nav-options select:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        nav {
+            background-color: #333;
+            padding: 5px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero {
+            background-image:url(bg1.jpg);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #b12828;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #90da4b;
+        }
+
+        .cta-buttons {
+            margin-top: 20px;
+        }
+
+        .cta-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .cta-buttons a:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .services {
+            padding: 50px 20px;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .services .service-item {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-options {
+                margin-top: 10px;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-options select {
+                margin-left: 0;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+
+            nav {
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            nav li.hidden {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: none;
+            }
+
+            .menu-hidden {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .menu-hidden.active {
+                display: flex;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+
+        .nav-slide ul li {
+            margin-left: 15px;
+            margin-top: 4px;
+            margin-bottom: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #424242;
+        }
+
+        .nav-slide ul li a {
+            padding: 8px 12px;
+            display: block;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .nav-slide ul li a:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background-color: #45a049;
+        }
+
+        #nav-side1 {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="nav-options">
+            <select name="services" id="services" onchange="navigateToPage(this)">
+                <option value="">Select your Wishes</option>
+                <option value="schools.html">For Schools</option>
+                <option value="colleges.html">For Colleges</option>
+                <option value="professional.html">Professional Courses</option>
+            </select>
+            <select name="language" id="language" onchange="navigateToPage(this)">
+                <option value="">Select Course</option>
+                <option value="english.html">HTML & CSS</option>
+                <option value="spanish.html">JavaScript</option>
+                <option value="french.html">AI & Robotics</option>
+                <option value="other.html">Other</option>
+            </select>
+        </div>
+       <a href="index.html"> <img src="logo.png" alt="Edujars Logo" class="logo"></a>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="nav-slide">
+        <ul>
+            <li id="nav-side1"><a href="index.html">Home</a></li>
+            <li id="nav-side2"><a href="about.html">About Us</a></li>
+            <li id="nav-side3"><a href="contact.html">Contact</a></li>
+            <li id="nav-side4"><a href="courses.data.html">Courses & Details</a></li>
+            <li id="nav-side5"><a href="other">Other</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Empowering Students to Innovate</h1>
+        <p>Your journey to mastering coding and robotics starts here.</p>
+        <div class="cta-buttons">
+            <a href="services">Get Started</a>
+            <a href="video">Watch Video</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Edujars. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
